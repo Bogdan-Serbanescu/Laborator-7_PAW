@@ -1,4 +1,4 @@
--1. De ce Logout este implementat ca <form method="post"> și nu ca un link <a href="/Auth/Logout">?
+-1. De ce Logout este implementat ca form method și nu ca un link?
 Ce s-ar putea întâmpla dacă logout-ul ar fi un GET accesibil printr-un link?
 
 Un GET ar permite atacuri CSRF: orice pagină externă poate plasa <img src="/Auth/Logout">, iar un utilizator autentificat care o vizitează ar fi deconectat involuntar. Formularul POST include un token anti-forgery generat automat de ASP.NET Core, care blochează astfel de atacuri
